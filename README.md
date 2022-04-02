@@ -1,9 +1,43 @@
 # CarRentalApp
-##### Aplikacja obsługująca wypożyczalnię samochodów
+
+## Spis treści
+* [O aplikacji](#O-aplikacji)
+* [Widoki](#Widoki)
+* [Setup](#setup)
+
+## O aplikacji
+Aplikacja umożliwiwa użytkownikom wypożyczenie dostepnego samochodu lub zarezerwowanie wypozyczenia na konkretną datę.
+
 ##### Aplikacja będzie umożliwiać:
 - Możliwość zalogowania użytkownika/klienta
 - Listę dostępnych samochodów
 - Możliwość zarezerwowania dostępnego samochodu
 - Wersję strony dla pracownika umożliwiająca oddawanie i dodawanie samochodów
 
-#### Aplikacja zostanie stworzona w technologii ASP.NET (MVC)
+##### Funkcjonalności:
+- wynajem pojazdu
+- rezerwacja pojazdu
+- wgląd w historię swoich wypożyczeń samochodu
+- wgląd w historię wypożyczeń przez danego klienta
+- zarządzanie pojazdami
+- zarządzanie pracownikami
+- zarządzanie klientami
+Zakresy uprawnień:
+Administrator:
+- Możliwość zalogowania się do aplikacji
+- Możliwośc zarządzania klientami oraz pracownikami
+
+Pracownik:
+- Możliwość zalogowania się do aplikacji
+- Możliwość dodawania i usuwania pojazdów z listy dostępnych
+- Zarządzenie klientami (dodawanie, usuwanie)
+- Możliwość zarządzania samochodami (wynajęcie, rezerwacja, oddanie)
+- Wgląd w historię wypożyczeń pojazdów
+- Wgląd w historię wypożyczeń klienta
+
+Klient:
+- Możliwość zalogowania się do aplikacji
+- Możliwość zarezerwowania pojazdu
+- Możliwość podglądu daty wypożyczenia, czasu wypożyczania, historii swoich wypożyczeń
+
+## Widoki
