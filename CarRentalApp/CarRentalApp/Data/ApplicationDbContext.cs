@@ -14,6 +14,6 @@ namespace CarRentalApp.Data
 
         }
 
-        
+        public DbSet<Samochod> Samochody{ get; set; }
     }
 }
