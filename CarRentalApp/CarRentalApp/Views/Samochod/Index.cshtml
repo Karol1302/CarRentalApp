@@ -1,0 +1,43 @@
+﻿@model IEnumerable<CarRentalApp.Models.Samochod>
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Nasze Samochody</h2>
+        </div>
+        <div class="col-6">
+            Dodaj samochod
+        </div>
+    </div>
+    <br/>
+
+    @if(Model.Count() > 0)
+            {
+               <table class="table table-bordered table-striped" style="width:100%">
+                   <thead>
+                       <tr>
+                           <th>
+                               Nazwa Samochodu
+                           </th>
+                           <th>
+                               Id Samochodu
+                           </th>
+                       </tr>
+                   </thead>
+                   <tbody>
+                       @foreach(var samochod in Model)
+                       { 
+                           <tr>
+                              <td width="30%"></td>
+                              <td width="30%">@samochod.Nazwa</td>
+                              <td width="30%">@samochod.Id</td>
+                           </tr>
+                       }
+                   </tbody>
+               </table> 
+    }
+    else
+        {
+          <p>Brak samochodow</p>
+        }
+</div>
