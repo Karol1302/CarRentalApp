@@ -1,0 +1,107 @@
+DROP DATABASE IF EXISTS wypozyczalnia_samochodow;
+GO
+CREATE DATABASE wypozyczalnia_samochodow;
+GO
+
+USE wypozyczalnia_samochodow;
+GO
+
+
+DROP TABLE IF EXISTS dbo.Car;
+GO
+CREATE TABLE dbo.Car (
+	CarId INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	Brand NVARCHAR(100) NOT NULL,
+	modelYear NVARCHAR(15) NOT NULL,
+	capacity FLOAT NOT NULL,
+	plateNumber NVARCHAR(15) NOT NULL,
+	bodyType NVARCHAR(20) NOT NULL,
+	color NVARCHAR(10) NOT NULL,
+	status NVARCHAR(10) NOT NULL
+);
+GO
+
+DROP TABLE IF EXISTS dbo.Customer;
+GO
+CREATE TABLE dbo.Customer (
+	CustomerId INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	firstName NVARCHAR(25) NOT NULL,
+	secondName NVARCHAR(25) NOT NULL,
+	phoneNumber NVARCHAR(25) NOT NULL,
+	emailAddress NVARCHAR(25) NOT NULL,
+	dateOfBirth DATE NOT NULL,
+	username NVARCHAR(25) NOT NULL,
+	password NVARCHAR(25) NOT NULL
+);
+GO
+
+DROP TABLE IF EXISTS dbo.Employee;
+GO
+CREATE TABLE dbo.Employee (
+	EmployeeId INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	firstName NVARCHAR(25) NOT NULL,
+	secondName NVARCHAR(25) NOT NULL,
+	phoneNumber NVARCHAR(25) NOT NULL,
+	emailAddress NVARCHAR(25) NOT NULL,
+	dateOfBirth DATE NOT NULL,
+	startWork DATE NOT NULL,
+	username NVARCHAR(25) NOT NULL,
+	password NVARCHAR(25) NOT NULL
+);
+GO
+
+DROP TABLE IF EXISTS dbo.Rent;
+GO
+CREATE TABLE dbo.Rent (
+	RentId INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	CarId INT NOT NULL,
+	CustomerId INT NOT NULL,
+	EmployeeId INT NOT NULL,
+	rentStart DATETIME NOT NULL,
+	rentEnd DATETIME NOT NULL,
+	status NVARCHAR(10) NOT NULL
+);
+GO
+
+DROP TABLE IF EXISTS dbo.Booking;
+GO
+CREATE TABLE dbo.Booking (
+	BookingId INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	CarId INT NOT NULL,
+	CustomerId INT NOT NULL,
+	bookingStart DATETIME NOT NULL,
+	bookingEnd DATETIME NOT NULL
+);
+GO
+
+DROP TABLE IF EXISTS dbo.Opinion;
+GO
+CREATE TABLE dbo.Opinion (
+	OpinionId INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+	Rentid INT NOT NULL,
+	CustomerId INT NOT NULL,
+	rating SMALLINT NOT NULL,
+	message NVARCHAR(255) NOT NULL
+);
+GO
+
+ALTER TABLE dbo.Car
+ADD CONSTRAINT CHK_Year CHECK (modelYear >=1900 AND modelYear <= 2100);
+GO
+
+ALTER TABLE dbo.Rent
+ADD CONSTRAINT FK_RentCars FOREIGN KEY (CarId) REFERENCES Car(CarId),
+	CONSTRAINT FK_RentCustomer FOREIGN KEY (CustomerId) REFERENCES Customer(CustomerId),
+	CONSTRAINT FK_RentEmployee FOREIGN KEY (EmployeeId) REFERENCES Employee(EmployeeId);
+GO
+
+ALTER TABLE dbo.Booking
+ADD CONSTRAINT FK_BookingCars FOREIGN KEY (CarId) REFERENCES Car(CarId),
+	CONSTRAINT FK_BookingCustomer FOREIGN KEY (CustomerId) REFERENCES Customer(CustomerId);
+GO
+
+ALTER TABLE dbo.Opinion
+ADD CONSTRAINT FK_OpinionRent FOREIGN KEY (RentId) REFERENCES Rent(RentId),
+	CONSTRAINT FK_OpinionCustomer FOREIGN KEY (CustomerId) REFERENCES Customer(CustomerId),
+	CONSTRAINT CHK_Rating CHECK (rating >=1 AND rating <= 10);
+GO
