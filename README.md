@@ -2,6 +2,7 @@
 
 ## Spis treści
 * [O aplikacji](#O-aplikacji)
+* Baza Danych
 * [Widoki](#Widoki)
 * [Setup](#setup)
 
@@ -14,7 +15,7 @@ Aplikacja umożliwiwa użytkownikom wypożyczenie dostepnego samochodu lub zarez
 - Możliwość zarezerwowania dostępnego samochodu
 - Wersję strony dla pracownika umożliwiająca oddawanie i dodawanie samochodów
 
-##### Funkcjonalności:
+##### Funkcje aplikacji:
 - wynajem pojazdu
 - rezerwacja pojazdu
 - wgląd w historię swoich wypożyczeń samochodu
@@ -22,7 +23,8 @@ Aplikacja umożliwiwa użytkownikom wypożyczenie dostepnego samochodu lub zarez
 - zarządzanie pojazdami
 - zarządzanie pracownikami
 - zarządzanie klientami
-Zakresy uprawnień:
+
+##### Zakresy uprawnień:
 Administrator:
 - Możliwość zalogowania się do aplikacji
 - Możliwośc zarządzania klientami oraz pracownikami
@@ -40,4 +42,12 @@ Klient:
 - Możliwość zarezerwowania pojazdu
 - Możliwość podglądu daty wypożyczenia, czasu wypożyczania, historii swoich wypożyczeń
 
+## Baza danych
+Diagram ERD
+
+![diagram](https://flic.kr/p/2nqwZEg)
+
 ## Widoki
+Prototyp ekranu logowania
+
+![logowanie]([url-to-image](https://flic.kr/p/2nqy76G))
