@@ -44,7 +44,7 @@ Klient:
 
 ## Baza danych
 Diagram ERD
-
+<img src="https://iili.io/hzsqil.md.png" data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png" width="750" height="400" />
 [![hzs5Wx.md.png](https://iili.io/hzs5Wx.md.png)](https://freeimage.host/i/hzs5Wx)
 
 ## Widoki
