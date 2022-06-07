@@ -1,0 +1,31 @@
+﻿@model ATHCarRentNetworkSystem.ViewModels.CarRentPlaceItemViewModel
+
+@{
+    ViewData["Title"] = "CarList";
+}
+
+<h1>Car list</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@if (Model is not null)
+    @foreach (var item in Model.carRentPlanceViewModels) {
+            <tr>                
+                <td>
+                    <div>@item._model</div>
+                    @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |*@
+                    @Html.ActionLink("Details", "Details", new {  id = item._id  }) |
+                    @*@Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })*@
+                </td>
+            </tr>
+}
+    </tbody>
+</table>
