@@ -1,0 +1,51 @@
+﻿@using ATHCarRentNetworkSystem.Models
+@model ATHCarRentNetworkSystem.Areas.MainAdmin.ViewModels.WypozyczenieEditViewModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Wypozyczenie</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="DataUtworzenia" class="control-label"></label>
+                <input asp-for="DataUtworzenia" class="form-control" />
+                <span asp-validation-for="DataUtworzenia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataRozpoczecia" class="control-label"></label>
+                <input asp-for="DataRozpoczecia" class="form-control" />
+                <span asp-validation-for="DataRozpoczecia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="status" class="control-label"></label>
+                <select asp-for="status" class="form-control" asp-items="Html.GetEnumSelectList<StatusWypozyczenia>()"></select>
+                <span asp-validation-for="status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SamochodId" class="control-label"></label>
+                <select asp-for="SamochodId" class="form-control" asp-items="Model.SamochodSelectList"></select>
+                @*<select asp-for="SamochodId" class="form-control" asp-items="ViewBag.SamochodId"></select>*@
+                <span asp-validation-for="SamochodId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
