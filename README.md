@@ -2,7 +2,7 @@
 
 ## Spis treści
 * [O aplikacji](#O-aplikacji)
-* Baza Danych
+* [Baza Danych](#O-aplikacji)
 * [Widoki](#Widoki)
 * [Setup](#setup)
 
@@ -45,9 +45,9 @@ Klient:
 ## Baza danych
 Diagram ERD
 
-![diagram](https://flic.kr/p/2nqwZEg)
+[erd](https://live.staticflickr.com/65535/52129827903_bdb52b389f_b.jpg)
 
 ## Widoki
 Prototyp ekranu logowania
 
-![logowanie]([url-to-image](https://flic.kr/p/2nqy76G))
+[logowanie](https://live.staticflickr.com/65535/52130044674_368e08f53e_b.jpg)
