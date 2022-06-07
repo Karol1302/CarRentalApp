@@ -21,7 +21,7 @@ namespace CarRentalApp.Controllers
         public IActionResult Index()
         {
             IEnumerable<Samochod> objList = _db.Samochody;
-            return View();
+            return View(objList);
         }
     }
 }
