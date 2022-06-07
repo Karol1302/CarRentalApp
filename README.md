@@ -45,9 +45,9 @@ Klient:
 ## Baza danych
 Diagram ERD
 
-[erd](CarRentNetworkSystem/Front/ERD.png)
+[erd](Front/ERD.png)
 
 ## Widoki
 Prototyp ekranu logowania
 
-[logowanie](CarRentNetworkSystem/Front/logowanie.png)
+[logowanie](Front/logowanie.png)
