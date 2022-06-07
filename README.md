@@ -52,4 +52,4 @@ Diagram ERD
 Prototyp ekranu logowania
 
 <img src="https://i.postimg.cc/QdG4TSnv/logowanie.png" width="650" height="400" />
-![logowanie](https://i.postimg.cc/QdG4TSnv/logowanie.png)
+
