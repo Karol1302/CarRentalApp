@@ -45,7 +45,7 @@ Klient:
 ## Baza danych
 Diagram ERD
 
-![ERD](https://i.postimg.cc/2jtXzCdk/ERD.png)
+[![hzsqil.md.png](https://iili.io/hzsqil.md.png)](https://freeimage.host/i/hzsqil)
 
 ## Widoki
 Prototyp ekranu logowania
