@@ -44,7 +44,9 @@ Klient:
 
 ## Baza danych
 Diagram ERD
-[![hzs5Wx.md.png](https://i.ibb.co/yk4K8MV/Zrzut-ekranu-2022-06-07-232140.png)
+
+![hzs5Wx.md.png](https://i.ibb.co/yk4K8MV/Zrzut-ekranu-2022-06-07-232140.png)
+<img src="https://i.ibb.co/yk4K8MV/Zrzut-ekranu-2022-06-07-232140.png" width="700" height="450" />
 
 ## Widoki
 Prototyp ekranu logowania
