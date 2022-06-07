@@ -45,9 +45,9 @@ Klient:
 ## Baza danych
 Diagram ERD
 
-[erd](https://live.staticflickr.com/65535/52129827903_bdb52b389f_b.jpg)
+[erd](CarRentNetworkSystem/Front/ERD.png)
 
 ## Widoki
 Prototyp ekranu logowania
 
-[logowanie](https://live.staticflickr.com/65535/52130044674_368e08f53e_b.jpg)
+[logowanie](CarRentNetworkSystem/Front/logowanie.png)
