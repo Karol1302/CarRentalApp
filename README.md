@@ -45,9 +45,9 @@ Klient:
 ## Baza danych
 Diagram ERD
 
-[erd](Front/ERD.png)
+[ERD](ERD.png)
 
 ## Widoki
 Prototyp ekranu logowania
 
-[logowanie](Front/logowanie.png)
+[logowanie](logowanie.png)
